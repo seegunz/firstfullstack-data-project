@@ -1,13 +1,10 @@
 const express = require('express')
+const { getting, posting } = require('../controller/control')
 
 const router = express.Router()
 
-router.get('/', (req, res)=>{
-    res.json({msg: 'getting'})
-})
+router.post('/', posting)
 
-router.post('/', (req, res)=>{
-    res.json({msg: 'posting'})
-})
+router.get('/', getting)
 
 module.exports = router

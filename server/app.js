@@ -11,4 +11,4 @@ app.use(express.json())
 app.use(cors())
 app.use('/api/data', router)
 
-app.listen(PORT, ()=>`server started on port ${PORT}`)
+app.listen(PORT, ()=>console.log(`server started on port ${PORT}`))
