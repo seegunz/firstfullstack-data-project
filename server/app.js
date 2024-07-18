@@ -10,5 +10,6 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.use('/api/data', router)
+mongoose.connect(process.env.MONGOOSE_CONNECT)
 
 app.listen(PORT, ()=>console.log(`server started on port ${PORT}`))
